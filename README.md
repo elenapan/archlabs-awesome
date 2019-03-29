@@ -9,6 +9,7 @@ After installing ArchLabs:
 sudo pacman -S awesome pamac inotify-tools git # Install needed software
 git clone https://github.com/elenapan/archlabs-awesome.git
 cp -rT archlabs-awesome ~ # Copy files to home directory
+xrdb ~/.Xresources # Load xrdb settings
 fc-cache # Refresh font cache
 rm ~/.git ~/screenshots # Delete the repo's non needed folders
 ```
