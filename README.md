@@ -1,9 +1,10 @@
 # ArchLabs Awesome
 A customized AwesomeWM config meant to be used on a clean **ArchLabs** installation.
-It is in a usable sate but still a work in progress!
+It is in a usable state but still a **work in progress**!
+Please do not hesitate to open an issue if you encounter bugs or if you have any suggestion for this theme.
 
 ## Installation
-
+After installing ArchLabs:
 ```shell
 sudo pacman -S awesome pamac inotify-tools git # Install needed software
 git clone https://github.com/elenapan/archlabs-awesome.git
@@ -29,10 +30,14 @@ rm ~/.git screenshots # Delete the repo's non needed folders
 - Generate window buttons dynamically instead of using images (will allows buttons to change color according to the xrdb colors)
 - Network widget should change icon depending on type of connection (wired/wireless)
 - Add night mode widget (will require `redshift` or `clight` to be installed)
-- Add preview screenshots in repo
 - Test sidebar with multiple monitors
 - Prettier right click menu
 - Check if garbage collection can be done with a Lua timer instead of awful.widget.watch
 - Remove (if titlebar buttons provide that info) or prettify tasklist client modifiers (floating, ontop, etc)
 - Alt tab widget (in order to justify removing bottom bar and increase available vertical space)
 - Clean up code (remove TODOs and random notes)
+
+## Screenshot previews
+![Screenshot](./screenshots/ss1.png?raw=true)
+![Screenshot](./screenshots/ss2.png?raw=true)
+![Screenshot](./screenshots/ss3.png?raw=true)
