@@ -1,0 +1,91 @@
+! Base colors
+*.foreground: #FFFFFF
+*.background: #2C2D33
+*.cursorColor: #FFFFFF
+
+*.color0: #41424B
+*.color1: #F0719B
+*.color2: #5AF7B0
+*.color3: #FFA56B
+*.color4: #57C7FF
+*.color5: #C792EA
+*.color6: #89DDFF
+*.color7: #FFFFFF
+*.color8: #4E515B
+*.color9: #F02E6E
+*.color10: #2CE592
+*.color11: #FF8537
+*.color12: #1DA0E2
+*.color13: #A742EA
+*.color14: #47BAE8
+*.color15: #DEE6E7
+
+! Rofi
+rofi.font: monospace 12
+rofi.bw: 0
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #2c2d33, #ffffff, #2c2d33
+rofi.color-normal: #2c2d33, #ffffff, #2c2d33, #57C7FF, #2c2d33
+rofi.color-urgent: argb:00000000, #F0719B, argb:00000000, argb:00000000, #FFA56B
+rofi.color-active: argb:00000000, #57C7FF, argb:00000000, argb:00000000, #FFA56B
+rofi.kb-cancel: Escape,Alt+F1
+
+! xterm
+xterm*termName: xterm-256color
+xterm*font: monospace
+xterm*faceName: monospace:size=11
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*eightBitInput: false
+
+! URxvt
+URxvt*saveline: 15000
+URxvt*termName: rxvt-256color
+URxvt*iso14755: false
+URxvt*depth: 32
+!URxvt*background: [95]#2c2d33
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*internalBorder: 16
+URxvt*externalBorder: 0
+URxvt*letterSpace: -1
+URxvt.font: xft:monospace:size=11
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
+URxvt.urlLauncher: exo-open
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+URxvt.geometry: 90x34
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 4
+URxvt*buffered: false
+
+! UXTerm
+UXTerm*termName: xterm-256color
+UXTerm*cursorColor: white
+UXTerm*VT100.geometry: 90x34
+UXTerm*font: monospace
+UXTerm*faceSize: 11
+UXTerm*dynamicColors: true
+UXTerm*utf8: 2
+UXTerm*eightBitInput: true
+UXTerm*saveLines: 10000
+UXTerm*scrollKey: true
+UXTerm*scrollTtyOutput: false
+UXTerm*scrollBar: false
+UXTerm*rightScrollBar: false
+UXTerm*jumpScroll: true
+UXTerm*multiScroll: true
+UXTerm*toolBar: false
+
