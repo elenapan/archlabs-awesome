@@ -8,7 +8,7 @@ After installing ArchLabs:
 ```shell
 sudo pacman -S awesome pamac inotify-tools git # Install needed software
 git clone https://github.com/elenapan/archlabs-awesome.git
-cp -rT archlabs-awesome ~ # Copy files to home directory
+cp -rT archlabs-awesome ~ # Copy files to home directory. WARNING: THIS WILL OVERWRITE EXISTING FILES!
 xrdb ~/.Xresources # Load xrdb settings
 fc-cache # Refresh font cache
 rm ~/.git ~/screenshots # Delete the repo's non needed folders
@@ -28,7 +28,8 @@ rm ~/.git ~/screenshots # Delete the repo's non needed folders
 - `hjkl` equivalent keybinds for all arrow keybinds
 - Update button: add text or tooltip (e.g. '34 packages need to be updated')
 - Update button: icon and color should change depending on whether or not there are any updates
-- Generate window buttons dynamically instead of using images (will allows buttons to change color according to the xrdb colors)
+- Generate window buttons dynamically instead of using images (will allow buttons to change color according to the xrdb colors)
+- Volume notifications
 - Network widget should change icon depending on type of connection (wired/wireless)
 - Add night mode widget (will require `redshift` or `clight` to be installed)
 - Test sidebar with multiple monitors
