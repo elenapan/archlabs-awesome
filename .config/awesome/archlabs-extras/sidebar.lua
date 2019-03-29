@@ -18,7 +18,6 @@ local function pad(size)
 end
 
 -- Some commonly used variables
-local playerctl_button_size = dpi(48)
 local icon_font = "Font Awesome 5 Free 22"
 -- TODO clarify why width and height are reversed
 local progress_bar_width = dpi(300)
@@ -181,67 +180,6 @@ ram:buttons(
 ))
 
 
-local playerctl_toggle_icon = wibox.widget.imagebox(icons.archlabs)
--- local playerctl_toggle_icon = wibox.widget.imagebox(icons.archlabs)
-playerctl_toggle_icon.resize = true
-playerctl_toggle_icon.forced_width = playerctl_button_size
-playerctl_toggle_icon.forced_height = playerctl_button_size
-playerctl_toggle_icon:buttons(gears.table.join(
-                         awful.button({ }, 1, function ()
-                             awful.spawn.with_shell("mpc toggle")
-                         end),
-                         awful.button({ }, 3, function ()
-                             awful.spawn.with_shell("mpvc toggle")
-                         end),
-                         awful.button({ }, 8, function ()
-                             sidebar.visible = false
-                             awful.spawn.with_shell("~/scr/Rofi/rofi_mpvtube")
-                         end),
-                         awful.button({ }, 9, function ()
-                             awful.spawn.with_shell("~/scr/info/mpv-query.sh")
-                         end)
-))
-
-local playerctl_prev_icon = wibox.widget.imagebox(icons.archlabs)
-playerctl_prev_icon.resize = true
-playerctl_prev_icon.forced_width = playerctl_button_size
-playerctl_prev_icon.forced_height = playerctl_button_size
-playerctl_prev_icon:buttons(gears.table.join(
-                         awful.button({ }, 1, function ()
-                             awful.spawn.with_shell("mpc prev")
-                         end),
-                         awful.button({ }, 3, function ()
-                             awful.spawn.with_shell("mpvc prev")
-                         end)
-))
-
-local playerctl_next_icon = wibox.widget.imagebox(icons.archlabs)
-playerctl_next_icon.resize = true
-playerctl_next_icon.forced_width = playerctl_button_size
-playerctl_next_icon.forced_height = playerctl_button_size
-playerctl_next_icon:buttons(gears.table.join(
-                         awful.button({ }, 1, function ()
-                             awful.spawn.with_shell("mpc next")
-                         end),
-                         awful.button({ }, 3, function ()
-                             awful.spawn.with_shell("mpvc next")
-                         end)
-))
-
-local playerctl_buttons = wibox.widget {
-  nil,
-  {
-    playerctl_prev_icon,
-    playerctl_toggle_icon,
-    playerctl_next_icon,
-    spacing = dpi(5),
-    layout  = wibox.layout.fixed.horizontal
-  },
-  nil,
-  expand = "none",
-  layout = wibox.layout.align.horizontal,
-}
-
 -- Time
 local hours = wibox.widget.textclock("%H")
 hours.font = "sans bold 55"
@@ -290,34 +228,6 @@ local date = wibox.widget {
     expand = "none",
     layout = wibox.layout.align.horizontal
 }
-
-local mpd_song = require("archlabs-extras.mpd_song")
-local mpd_widget_children = mpd_song:get_all_children()
-local mpd_title = mpd_widget_children[1]
-local mpd_artist = mpd_widget_children[2]
-mpd_title.font = "sans medium 14"
-mpd_artist.font = "sans 11"
-
--- Set forced height in order to limit the widgets to one line.
--- Might need to be adjusted depending on the font.
-mpd_title.forced_height = dpi(24)
-mpd_artist.forced_height = dpi(16)
-
-mpd_song:buttons(gears.table.join(
-                awful.button({ }, 1, function ()
-                    awful.spawn.with_shell("mpc toggle")
-                end),
-                awful.button({ }, 3, function ()
-                    -- Spawn music terminal
-                    awful.spawn("music_terminal")
-                end),
-                awful.button({ }, 4, function ()
-                    awful.spawn.with_shell("mpc prev")
-                end),
-                awful.button({ }, 5, function ()
-                    awful.spawn.with_shell("mpc next")
-                end)
-))
 
 local disk_space = require("archlabs-extras.disk")
 disk_space.font = "sans 14"
@@ -448,15 +358,6 @@ sidebar:setup {
     layout = wibox.layout.fixed.vertical
   },
   { ----------- MIDDLE GROUP -----------
-    -- playerctl_buttons,
-    -- {
-    --   -- Put some padding at the left and right edge so that
-    --   -- it looks better with extremely long titles/artists
-    --   pad(2),
-    --   mpd_song,
-    --   pad(2),
-    --   layout = wibox.layout.align.horizontal,
-    -- },
     pad(1),
     pad(1),
     { -- Center bars horizontally
