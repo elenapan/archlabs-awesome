@@ -1270,6 +1270,9 @@ awful.rules.rules = {
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
+          "Lxappearance",
+          "Pavucontrol",
+          "Nm-connection-editor",
           "xtightvncviewer"},
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -1281,6 +1284,8 @@ awful.rules.rules = {
           "AlarmWindow",  -- Thunderbird's calendar.
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+          "GtkFileChooserDialog",
+          "conversation",
         }
       }, properties = { floating = true }},
 
@@ -1289,9 +1294,9 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Dialogs are always centered and ontop
+    -- Dialogs are always centered, floating and ontop
     { rule_any = {type = { "dialog" }
-      }, properties = { placement = awful.placement.centered, ontop = true }
+      }, properties = { placement = awful.placement.centered, floating = true, ontop = true }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
