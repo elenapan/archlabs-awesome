@@ -39,6 +39,6 @@ rm ~/.git ~/screenshots # Delete the repo's non needed folders
 - Clean up code (remove TODOs and random notes)
 
 ## Screenshot previews
-![Screenshot](./screenshots/ss1.png?raw=true)
 ![Screenshot](./screenshots/ss2.png?raw=true)
 ![Screenshot](./screenshots/ss3.png?raw=true)
+![Screenshot](./screenshots/ss1.png?raw=true)
