@@ -1483,12 +1483,8 @@ end)
 
 -- Check ~/.xprofile for autostarting applications once on login
 
------------  Aggresive Garbage Collect  -------------
--- This looks stupid but it works. I am calling awesome-client from here
--- because it is an easy way to garbage collect on a timer.
-local garbage_collect_script = [[
-    bash -c "
-    awesome-client 'collectgarbage(\"collect\")'
-"]]
--- Garbage collection every 5 minutes
-awful.widget.watch(garbage_collect_script, 300, nil)
+-----------------------------------------------------
+----------  Aggresive Garbage Collection  -----------
+-----------------------------------------------------
+collectgarbage("setpause", 160)
+collectgarbage("setstepmul", 400)
