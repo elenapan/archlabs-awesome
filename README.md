@@ -1,3 +1,7 @@
+⚠️ This repo is now archived since [ArchLabs Linux is discontinued](https://archlabs.github.io/). ⚠️
+
+---
+
 # ArchLabs Awesome
 A customized AwesomeWM config meant to be used on a clean **ArchLabs** installation.
 It is in a usable state but still a **work in progress**!
